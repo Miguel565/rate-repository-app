@@ -6,17 +6,21 @@ import TopBar from './AppBar';
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#e1e4e8',
         alignItems: 'center',
         justifyContent: 'center',
-        padding: 5,
-        paddingEnd: 20
     },
+    appContainer: {
+        width: 'auto',
+        height: 'auto',
+        maxHeight: 1500,
+        flex: 1,
+    }
 });
 
 const Main = () => {
     return (
-        <View>
+        <View style={styles.appContainer}>
             <TopBar />
             <View style={styles.container}>
                 <RepositoryList />

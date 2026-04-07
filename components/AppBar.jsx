@@ -9,10 +9,10 @@ const styles = StyleSheet.create({
         verticalAlign: 'bottom',
         padding: 10,
         paddingTop: 60,
-        marginBottom: 20,
         height: 111,
-        width: 428,
+        width: 'auto',
         maxWidth: 'auto',
+        minWidth: 300
     },
     label: {
         fontSize: 24,
