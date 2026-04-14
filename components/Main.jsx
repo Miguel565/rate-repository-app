@@ -1,5 +1,6 @@
 //import { StatusBar } from 'expo-status-bar';
 import { View, StyleSheet } from 'react-native';
+import { Route, Routes, Navigate } from 'react-router-native';
 import RepositoryList from './RepositoryList';
 import TopBar from './AppBar';
 
@@ -22,9 +23,14 @@ const Main = () => {
     return (
         <View style={styles.appContainer}>
             <TopBar />
-            <View style={styles.container}>
-                <RepositoryList />
-            </View>
+            <Routes>
+                <Route path="/" element={
+                    <View style={styles.container}>
+                        <RepositoryList />
+                    </View>
+                } />
+                <Route path="*" element={<Navigate to="/" />} />
+            </Routes>
         </View>
     )
 };
