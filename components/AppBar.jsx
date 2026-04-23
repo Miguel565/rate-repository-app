@@ -1,5 +1,6 @@
 //import { Appbar } from 'react-native-paper';
-import { View, Text, StyleSheet, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, StyleSheet, Pressable, ScrollView } from 'react-native';
+import { Link } from 'react-router-native';
 
 const styles = StyleSheet.create({
     topContainer: {
@@ -19,20 +20,29 @@ const styles = StyleSheet.create({
         padding: 5,
         fontFamily: 'Arial, Solid',
         color: '#ffff',
+    },
+    scrollView: {
+        flexDirection: 'row',
+
     }
 });
 
 const TopBar = () => {
 
-    const ratePress = () => {
-        console.log('Repositorios');
-    }
-
     return (
         <View style={styles.topContainer}>
-            <TouchableWithoutFeedback onPress={ratePress}>
-                <Text style={styles.label}>Repositories</Text>
-            </TouchableWithoutFeedback>
+            <ScrollView horizontal={true} contentContainerStyle={styles.scrollView}>
+                <Pressable >
+                    <Link to='/' >
+                        <Text style={styles.label}>Repositories</Text>
+                    </Link>
+                </Pressable>
+                <Pressable>
+                    <Link to='/signin'>
+                        <Text style={styles.label}>Signin</Text>
+                    </Link>
+                </Pressable>
+            </ScrollView>
         </View>
     );
 };
