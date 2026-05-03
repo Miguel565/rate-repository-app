@@ -11,9 +11,11 @@
     "lint": "expo lint"
   },
   "dependencies": {
-    "expo": "~55.0.9",
+    "@babel/eslint-parser": "^7.28.6",
+    "expo": "^55.0.17",
     "expo-constants": "^55.0.11",
     "expo-status-bar": "~55.0.4",
+    "formik": "^2.4.9",
     "react": "19.2.0",
     "react-dom": "^19.2.0",
     "react-native": "0.83.4",
@@ -23,9 +25,9 @@
     "react-router-native": "^6.30.3"
   },
   "private": true,
+  "overrides": { "uuid": "^14.0.0" },
   "devDependencies": {
     "@types/react": "~19.2.10",
-    "babel-eslint": "^10.1.0",
     "eslint": "^9.39.4",
     "eslint-config-expo": "~55.0.0",
     "eslint-plugin-react": "^7.37.5"

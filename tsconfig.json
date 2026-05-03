@@ -1,4 +1,7 @@
 {
-  "compilerOptions": {},
+  "compilerOptions": {
+     "moduleResolution": "bundler",
+    "target": "ES2020",
+  },
   "extends": "expo/tsconfig.base"
 }
